@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "model-drift-monitor"
+version = "0.1.0"
+description = "Model monitoring system for detecting data and concept drift"
+readme = "README.md"
+authors = [{ name = "Model Drift Team" }]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = [
+  "pandas>=1.5",
+  "numpy>=1.23",
+  "scipy>=1.9",
+  "scikit-learn>=1.1",
+  "plotly>=5.0",
+  "streamlit>=1.20",
+  "evidently>=0.3.0"
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=7.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
