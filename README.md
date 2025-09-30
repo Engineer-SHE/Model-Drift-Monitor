@@ -19,12 +19,21 @@ Model Drift Monitor is a reference implementation of a **model monitoring system
 ### Installation
 
 ```bash
+# Create and activate virtual environment
 python -m venv .venv
-source .venv/bin/activate
+.venv\Scripts\activate  # On Windows
+# source .venv/bin/activate  # On macOS/Linux
+
+# Install dependencies
 pip install -e .
+
+# Fix NumPy compatibility issue (if needed)
+pip install "numpy<2"
 ```
 
-The project depends on `pandas`, `numpy`, `scipy`, `scikit-learn`, `plotly`, `streamlit`, and `evidently` (optional).
+**Note:** If you encounter NumPy compatibility errors, downgrade NumPy to version 1.x using `pip install "numpy<2"`.
+
+The project depends on `pandas`, `numpy`, `scipy`, `scikit-learn`, `plotly`, `streamlit`, and `evidently`.
 
 ### Quick Demo
 
